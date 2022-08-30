@@ -75,13 +75,54 @@ html, body {
     --border-radius: 0.25rem;
 
     /* ? Here i will build up my font sizes so i can use them over and over */
+    --h1: 3.875rem;
+    --h2: 3rem;
+    --h3: 2.5rem;
+    --h4: 2rem;
+    --h5: 1.5rem;
+    --h6: 1.25rem;
+
+}
+
+h1{
+    font-size: var(--h1);
+    font-weight:400;
+}
+
+h2{
+    font-size: var(--h2);
+    font-weight:400;
+}
+
+h3{
+    font-size: var(--h3);
+    font-weight:400;
+}
+
+h4{
+    font-size: var(--h4);
 
 
- }
+h4{
+    font-size: var(--h4);
+    font-weight:400;
+}    font-weight:400;
+}
+
+h5{
+    font-size: var(--h5);
+    font-weight:400;
+}
+
+h6{
+    font-size: var(--h6);
+    font-weight:400;
+}
 
 
 .ucc-logo{
-    margin-bottom:2.5rem ;
+    margin-top: 4rem;
+    margin-bottom:3rem ;
 }
 
 .input-group{
@@ -102,7 +143,18 @@ html, body {
     background-color: var(--primary-main);
     width: 24.75rem;
     height: 3rem;
-    font-size: ;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
 }
 
+.card-body{
+    display: flex;
+flex-direction: column;
+align-items: center;
+padding: 64px;
+    align-items: center;
 
+    position: relative;
+width: 524px;
+height: 670px;
+}
