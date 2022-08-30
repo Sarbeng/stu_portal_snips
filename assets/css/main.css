@@ -53,16 +53,40 @@ html, body {
     --warning-hover:#D36A1B;
     --warning-pressed:  #7E3F10;
 
+     /* ?These are all my neutral colors and their variations based on their use case */
+    --neutral-100 : #FFFFFF;
+    --neutral-200 : #DCDCDC;
+    --neutral-300 : #D5D5D5;
+    --neutral-400 :  #C9C9C9;
+    --neutral-500 : #AEAEAE;
+    --neutral-600 : #8E8E8E;
+    --neutral-700 : #696969;
+    --neutral-800 : #575757;
+    --neutral-900 : #393939;
+    --neutral-black: #000000;
+    
+
     /*? This is a list of drop shadows to add depth to my buttons, inputs and other things really like cards  */
     --small-shadwow : ;
     --medium-shadow: 0px 8px 16px rgba(36, 102, 117, 0.25);
     --large-shadow: 0px 10px 20px rgba(36, 102, 117, 0.3);
+
+    /* Here is my list of border radi */
+    --border-radius: 0.25rem;
 
 
  }
 
 
 .inputs{
+    width: 24.75rem;
+    height: 3rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--neutral-500) ;
+    padding: 8px, 12px, 8px, 12px;
+    margin-top: 0.5rem;
     
 }
+
+
 
