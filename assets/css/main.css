@@ -101,13 +101,8 @@ h3{
 
 h4{
     font-size: var(--h4);
-
-
-h4{
-    font-size: var(--h4);
     font-weight:400;
-}    font-weight:400;
-}
+}   
 
 h5{
     font-size: var(--h5);
@@ -121,7 +116,7 @@ h6{
 
 
 .ucc-logo{
-    margin-top: 4rem;
+    margin-top: auto;
     margin-bottom:3rem ;
 }
 
@@ -135,7 +130,8 @@ h6{
     border-radius: var(--border-radius);
     border: 1px solid var(--neutral-500) ;
     padding: 0.5rem, 0.75rem, 0.5rem, 0.75rem;
-    margin-top: 0.5rem;
+    margin-top: 0.025rem;
+    /* font-size: 0.8125rem; */
     
 }
 
@@ -147,14 +143,36 @@ h6{
     margin-top: 1.25rem;
 }
 
-.card-body{
-    display: flex;
-flex-direction: column;
-align-items: center;
-padding: 64px;
-    align-items: center;
+.btn-primary:hover{
+    background-color: var(--primary-hover);
+}
 
+.btn-info{
+    background-color: var(--info-main);
+}
+
+.btn-danger{
+    background-color: var(--danger-main);
+}
+
+.btn-other{
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 5rem;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    align-items: center;
     position: relative;
-width: 524px;
-height: 670px;
+    width: 32rem;
+    height: 42rem;
+}
+
+.others{
+    font-size: 0.75rem;
 }
