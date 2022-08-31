@@ -14,7 +14,7 @@
     <!-- <link rel="stylesheet" href="assets/fontawesome/css/solid.css">
     <link rel="stylesheet" href="assets/fontawesome/css/brands.css"> -->
     <!-- <link rel="stylesheet" href="assets/fontawesome/css/fontawesome6.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--? Calling the our main csss file to add personal styling to  our page -->
     <link rel="stylesheet" href="assets/css/main.css">
 
@@ -36,13 +36,15 @@
                 <!--? I've put the section for my reference number input here, it consists of a label and an input -->
                 <section class="input-group">
                     <label for="reference_number">Reference number</label><br>
-                    <input class="inputs" name="reference_number" type="text">
+                    <input class="inputs" name="reference_number" type="text" required="">
                 </section>
 
                 <!--? I've put the section for my password input here, it consists of a label and an input -->
                 <section class="input-group">
                     <label for="password">Password</label><br>
-                    <input class="inputs" name="password" type="password">
+                    <input class="inputs" name="password" type="password" autocomplete="current-password" required="" id="id_password">
+                    <!-- ?I've added a section to help me to able to toggle the password on and off -->
+                    <i class="far fa-eye mt-3" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
                 </section>
 
                 <!--? I've put the section for my button input here, it consists of a label and an input -->
@@ -56,14 +58,14 @@
 
                 <!--? I've put the section for announcements and helplines buttons here, it consists of a label and an icon button -->
                 <section class="input-group">
-                   <div class="d-block col text-center">
+                <div class="d-block col text-center">
                     <button class="btn btn-danger btn-other mb-1 "> <img class="img-fluid" src="assets/images/campaign.svg" alt=""> </button>
                     <p class="others">Announcements</p>
-                   </div>
-                   <div class="d-block col text-center">
+                </div>
+                <div class="d-block col text-center">
                     <button class="btn btn-info btn-other mb-1">  <img class="img-fluid" src="assets/images/help_outline.svg" alt=""> </button>
                     <p class="others">Helplines</p>
-                   </div>
+                </div>
                 </section>
                 
             </form>
@@ -71,6 +73,18 @@
    </div>
 
     </div>
-    
+    <script>
+        // This piece of code helps us to toggle the password inputs so that users can see what password they have typed
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#id_password');
+
+        togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+});
+    </script>
 </body>
 </html>
