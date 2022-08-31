@@ -143,22 +143,34 @@ h6{
     margin-top: 1.25rem;
 }
 
+.primary{
+    color: var(--primary-main);
+}
+
 .btn-primary:hover{
     background-color: var(--primary-hover);
 }
 
+
+/* This doesnt work for some reason , lets find out why later */
 .btn-info{
     background-color: var(--info-main);
 }
 
+/* This doesnt work for some reason , lets find out why later */
 .btn-danger{
     background-color: var(--danger-main);
 }
 
+/* This doesnt work for some reason , lets find out why later */
+.btn-danger:hover{
+    background-color: var(--danger-hover);
+}
+
 .btn-other{
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 5rem;
+    width: 2.85rem;
+    height: 2.85rem;
+    border-radius: 6rem;
 }
 
 
