@@ -153,7 +153,7 @@ h6{
     font-size: 1rem;
 } */
 
-.bg-primary{
+.bg-primary-1{
     background-color: var(--primary-main);
 }
 
@@ -169,6 +169,14 @@ h6{
 /* This doesnt work for some reason , lets find out why later */
 .btn-info{
     background-color: var(--info-main);
+}
+
+.btn-info:hover{
+    background-color: var(--info-hover);
+}
+
+.btn-info:active{
+    border-color: var(--info-border);
 }
 
 /* This doesnt work for some reason , lets find out why later */
