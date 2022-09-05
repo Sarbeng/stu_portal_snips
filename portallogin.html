@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
 
     <!--? End of liks for styling of students portal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+   
 
     <title>UCC Students Portal</title>
 </head>
@@ -58,12 +60,16 @@
 
                 <!--? I've put the section for announcements and helplines buttons here, it consists of a label and an icon button -->
                 <section class="input-group">
+
+                <!--? Trigger the announcement modal with this button -->
                 <div class="d-block col text-center">
-                    <button class="btn btn-danger btn-other mb-1 "> <img class="img-fluid" src="assets/images/campaign.svg" alt=""> </button>
+                    <button type="button" class="btn btn-danger btn-other mb-1 " data-bs-toggle="modal" data-bs-target="#announcement"> <img class="img-fluid" src="assets/images/campaign.svg" alt=""> </button>
                     <p class="others">Announcements</p>
                 </div>
+
+                <!--? Trigger the helpline modal with this button -->
                 <div class="d-block col text-center">
-                    <button class="btn btn-info btn-other mb-1">  <img class="img-fluid" src="assets/images/help_outline.svg" alt=""> </button>
+                    <button  type="button" class="btn btn-info btn-other mb-1" data-bs-toggle="modal" data-bs-target="#helplines">  <img class="img-fluid" src="assets/images/help_outline.svg" alt=""> </button>
                     <p class="others">Helplines</p>
                 </div>
                 </section>
@@ -71,6 +77,76 @@
             </form>
         </div>
    </div>
+
+   <!--? I'll place a modal here so that when i click my announcements button it'll pop up -->
+   <!--!Announcement Modal -->
+<div id="announcement" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+         
+          <h4 class="modal-title">Announcements</h4>
+          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!-- <p>Some text in the modal.</p> -->
+          <article class="info-normal p-4 m-4">
+            <h6>Financial Aid (Student Loan Trust Fund)</h6>
+            <p>The Students Loan Trust Fund (SLTF) was established in December 2005 under the Trustee Incorporation Act 1962, Act 820.</p>
+
+            <p>The objectives of the Trust Fund are to provide financial resources for the sound management of the Trust for the benefit of students 
+            and to help promote and facilitate the national ideals enshrined in Article 28 and 38 of the 1992 Constitution.
+            </p>
+
+            <p>
+                Students who want to apply for financial aid should visit the following links to know more about the Trust Fund and its application process; 
+                <ul>
+                    <li><a href="https://www.sltf.gov.gh/" target="_blank">Student Loan Trust Fund</a></li>
+                    <li><a href="financial-aid.pdf" target="_blank">Financial Aid</a></li>
+                    <li><a href="sltf-application-requirements.pdf" target="_blank">Financial Aid Application Requirements</a></li>
+                </ul>
+            </p>
+        </article>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+     <!--!Helpline Modal -->
+<div id="helplines" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+         
+          <h4 class="modal-title">Helplines</h4>
+          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!-- <p>Some text in the modal.</p> -->
+          <h6 class="mb-2" >Helplines (Working hours 08:00 - 18:00)</h6>
+          <ul>
+              <li>Main UCC Accounts office : 0508118646</li>
+              <li>Fees enquiries <span class="text-danger">(CoDe Students only)</span> call: <br> <strong>033-2092-044 / 033-2092-050</strong></li>
+              <li>System support call MIS office on: <strong>054-5802-062 or 0545801203 </strong></li>
+              <li>System support<span class="text-danger"> Whatsapp Only</span> MIS office on: <strong>0244080587</strong></li>
+              <!-- <li>System support<span class="text-danger"> Whatsapp Only</span> MIS office on: <strong>0572568591</strong></li> -->
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
 
     </div>
     <script>
@@ -86,5 +162,7 @@
         this.classList.toggle('fa-eye-slash');
 });
     </script>
+
+    
 </body>
 </html>
